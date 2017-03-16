@@ -13,7 +13,11 @@
 (defvar zhuxi/packages '(
 			 company
 			 monokai-theme
+			 hungry-delete
 			 ) "Default packages")
+
+(setq package-selected-packages zhuxi/packages)
+
 (defun zhuxi/packages-installed-p ()
   (loop for pkg in zhuxi/packages
 	when (not (package-installed-p pkg)) do (return nil)
@@ -25,6 +29,9 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 ;;;;;;;;;;;;;;;;;;;;;;;package init complete;;;;;;;;;;;;;;;;;;
+;;hungry delete
+(require 'hungry-delete)
+(global-hungry-delete-mode t)
 
 ;-turn off tool-bar
 (tool-bar-mode -1)
@@ -35,7 +42,10 @@
 ;-turn off electric-indent-mode
 ;(electric-indect-mode 1)
 
-;-turn on the line number
+;;-turn on the line number
+(global-linum-mode t)
+
+;;-turn on cursour-type
 (setq-default cursor-type 'bar)
 
 ;;-turn off init screen;
@@ -104,7 +114,7 @@
  '(custom-safe-themes
    (quote
     ("c7a9a68bd07e38620a5508fef62ec079d274475c8f92d75ed0c33c45fbe306bc" default)))
- '(package-selected-packages (quote (company)))
+;; '(package-selected-packages (quote (company)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
