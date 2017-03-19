@@ -14,6 +14,13 @@
 			 company
 			 monokai-theme
 			 hungry-delete
+			 swiper
+			 counsel
+			 smartparens
+			 js2-mode
+			 nodejs-repl
+			 exec-path-from-shell
+			 popwin
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -33,11 +40,56 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode t)
 
+;;smex auto complete m + x
+;;(require 'smex) ; Not needed if you use package.el
+;;(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
+                  ; when Smex is auto-initialized on its first run.
+;(global-set-key (kbd "M-x") 'smex)
+
+
+;;swiper 
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+
+
+;;smartparens
+(require 'smartparens-config)
+(smartparens-global-mode t)
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+
+;;js default js2-model
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       auto-mode-alist))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;org mode;;;;;
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;;;;;;;;popwin;;;;;
+(require 'popwin)
+(popwin-mode t)
+
 ;-turn off tool-bar
 (tool-bar-mode -1)
 
 ;-turn off scroll-bar
 (scroll-bar-mode -1)
+
+
+;;auto reload file when file changes by other
+(global-auto-revert-mode t)
 
 ;-turn off electric-indent-mode
 ;(electric-indect-mode 1)
