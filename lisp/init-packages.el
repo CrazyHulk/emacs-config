@@ -43,7 +43,7 @@
 ;;js default js2-model
 (setq auto-mode-alist
       (append
-       '(("\\.js\\'" . js2-mode))
+       '(("\\.js\\'" . js2-jsx-mode))
        auto-mode-alist))
 
 (when (memq window-system '(mac ns))
@@ -53,16 +53,13 @@
 (require 'popwin)
 (popwin-mode t)
 
-;;auto reload file when file changes by other
-(global-auto-revert-mode t)
+;;company model
+(global-company-mode t)
+
+;;smartparens
+(smartparens-global-mode t)
 
 ;;;;;;;;;;;;;;;;;;;Set sublime theme;;;;;;;;;;;;;;;;
 (load-theme 'monokai t)
-
-
-
-;;smartparens
-(require 'smartparens-config)
-(smartparens-global-mode t)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (provide 'init-packages)
