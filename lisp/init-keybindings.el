@@ -14,4 +14,9 @@
 
 (global-set-key (kbd "C-c g f") 'counsel-git)
 
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
 (provide 'init-keybindings)
