@@ -12,4 +12,6 @@
 
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
+(global-set-key (kbd "C-c g f") 'counsel-git)
+
 (provide 'init-keybindings)
