@@ -16,6 +16,12 @@
 ;;括号配对
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	 (t (save-excursion
+	      (ignore-errors (backward-up-list))
+	      (funcall fn)))))
+
 ;turn on delete selection (t == 1)
 (delete-selection-mode t)
 
