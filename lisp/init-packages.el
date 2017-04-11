@@ -16,6 +16,7 @@
 			 exec-path-from-shell
 			 popwin
 			 reveal-in-osx-finder
+			 expand-region
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -60,8 +61,12 @@
 ;;smartparens
 (smartparens-global-mode t)
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
-
+;;expand-region
+(global-set-key (kbd "M-p") 'er/expand-region)
 ;;;;;;;;;;;;;;;;;;;Set sublime theme;;;;;;;;;;;;;;;;
+(setq
+ monokai-highlight-line "#B7E312")
+ (setq monokai-user-variable-pitch t)
 (load-theme 'monokai t)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (provide 'init-packages)
