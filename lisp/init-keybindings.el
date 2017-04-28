@@ -16,6 +16,8 @@
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
+(global-set-key (kbd "C-c s") 'org-capture)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 

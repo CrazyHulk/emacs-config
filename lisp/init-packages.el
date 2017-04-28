@@ -18,6 +18,7 @@
 			 reveal-in-osx-finder
 			 expand-region
 			 iedit
+			 org-pomodoro
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
