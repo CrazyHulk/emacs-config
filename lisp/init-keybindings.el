@@ -21,4 +21,25 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-key
+  "ff" 'find-file
+  "gr" 'recentf-open-files 
+
+  "gf" 'counsel-git
+
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+
+  "ps" 'helm-do-ag-project-root
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":"  'counsel-M-x
+  "wM" 'delete-other-windows)
+
 (provide 'init-keybindings)

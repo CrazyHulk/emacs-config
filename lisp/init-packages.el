@@ -2,6 +2,13 @@
   (require 'package)
   (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
   (add-to-list 'package-archives '("melpaen" . "https://melpa.org/packages/")))
+(setq package-archives
+      '(("org" . "https://orgmode.org/elpa/")
+    ("melpa" . "https://melpa.org/packages/")
+    ("melpa-stable" . "https://stable.melpa.org/packages/")
+    ("gnu" . "https://elpa.gnu.org/packages/")))
+
+;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (require 'cl)
 ;;add whatever packages you want here
@@ -23,6 +30,11 @@
 			 go-mode
 			 pallet
 			 evil
+			 evil-leader
+			 window-numbering
+			 which-key
+			 lsp-mode
+			 lsp-ui
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -75,8 +87,20 @@
 ;;  (setq monokai-user-variable-pitch t)
 ;; (load-theme 'monokai t)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-(provide 'init-packages)
 
-(pallet-mode)  
+;(pallet-mode)  
 ;(pallet-init)    ; 在.emacs.d 中生成一个 Cask 文件, 写入源与现有包
 ;(pallet-install) ; 将 elpa 中的 package 拷贝到.Cask/<you version>/elpa 目录中
+
+; vim mode
+(evil-mode 1)
+
+(window-numbering-mode)
+
+;(require 'powerline)
+;(powerline-default-theme)
+
+(which-key-mode)
+(setq which-key-side-window-location 'right)
+
+(provide 'init-packages)

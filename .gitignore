@@ -2,3 +2,6 @@
 .cask/
 auto-save-list/
 elpa/
+.lsp-session-v1
+Cask
+*.dat

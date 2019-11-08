@@ -12,6 +12,8 @@
 (require 'init-keybindings)
 (require 'init-org)
 
+(require 'init-golang)
+
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
