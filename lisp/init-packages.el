@@ -1,6 +1,7 @@
 (when (>= emacs-major-version 24)
   (require 'package)
-  (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t))
+  (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
+  (add-to-list 'package-archives '("melpaen" . "https://melpa.org/packages/")))
 
 (require 'cl)
 ;;add whatever packages you want here
@@ -19,6 +20,9 @@
 			 expand-region
 			 iedit
 			 org-pomodoro
+			 go-mode
+			 pallet
+			 evil
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -72,3 +76,7 @@
 ;; (load-theme 'monokai t)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (provide 'init-packages)
+
+(pallet-mode)  
+;(pallet-init)    ; 在.emacs.d 中生成一个 Cask 文件, 写入源与现有包
+;(pallet-install) ; 将 elpa 中的 package 拷贝到.Cask/<you version>/elpa 目录中
