@@ -5,6 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;package init begin;;;;;;;;;;;;;;;;;;;;;;;
 
 
+(org-babel-load-file (expand-file-name "zhuxi.org" user-emacs-directory))
 
 
 ;;smex auto complete m + x
@@ -16,8 +17,8 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (package-initialize)
 
-(require 'cask "~/.emacs.d/elpa/cask-20191004.1155/cask.el")
-(cask-initialize)    ; 类似于 package-initialize
+;(require 'cask "~/.emacs.d/elpa/cask-20191004.1155/cask.el")
+;(cask-initialize)    ; 类似于 package-initialize
 
 (require 'pallet)
 (pallet-mode t)      ; 激活 pallet, 在安装包时将 Cask 文件写入相应信息
@@ -29,7 +30,7 @@
 
 (require 'org-install)
 (require 'ob-tangle)
-(org-babel-load-file (expand-file-name "zhuxi.org" user-emacs-directory))
+;(org-babel-load-file (expand-file-name "zhuxi.org" user-emacs-directory))
 
 
 

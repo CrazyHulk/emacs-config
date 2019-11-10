@@ -8,7 +8,7 @@
     ("melpa-stable" . "https://stable.melpa.org/packages/")
     ("gnu" . "https://elpa.gnu.org/packages/")))
 
-;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (require 'cl)
 ;;add whatever packages you want here
@@ -27,14 +27,15 @@
 			 expand-region
 			 iedit
 			 org-pomodoro
-			 go-mode
 			 pallet
 			 evil
 			 evil-leader
 			 window-numbering
 			 which-key
+			 go-mode
 			 lsp-mode
 			 lsp-ui
+			 lsp-treemacs
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -88,7 +89,7 @@
 ;; (load-theme 'monokai t)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 
-;(pallet-mode)  
+(pallet-mode)  
 ;(pallet-init)    ; 在.emacs.d 中生成一个 Cask 文件, 写入源与现有包
 ;(pallet-install) ; 将 elpa 中的 package 拷贝到.Cask/<you version>/elpa 目录中
 

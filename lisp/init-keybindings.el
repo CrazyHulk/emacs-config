@@ -25,12 +25,14 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
-  "gr" 'recentf-open-files 
+  "fr" 'recentf-open-files 
 
   "gf" 'counsel-git
 
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
+
+  "t"  'lsp-ui-imenu
 
   "ps" 'helm-do-ag-project-root
   "0"  'select-window-0
