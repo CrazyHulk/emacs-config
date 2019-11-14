@@ -15,6 +15,7 @@
 (defvar zhuxi/packages '(
 			 company
 			 monokai-theme
+			 paper-theme
 			 hungry-delete
 			 swiper
 			 counsel
@@ -35,7 +36,12 @@
 			 go-mode
 			 lsp-mode
 			 lsp-ui
-			 lsp-treemacs
+			 flycheck
+			 helm-ag
+			 magit
+			 helm-dash
+			 yasnippet
+			 auto-yasnippet
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -76,6 +82,8 @@
 
 ;;company model
 (global-company-mode t)
+(setq company-idle-delay 0.1)
+(setq company-dabbrev-ignore-case t)
 
 ;;smartparens
 (smartparens-global-mode t)
@@ -102,6 +110,10 @@
 ;(powerline-default-theme)
 
 (which-key-mode)
-(setq which-key-side-window-location 'right)
+;(setq which-key-side-window-location 'right)
+
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (provide 'init-packages)

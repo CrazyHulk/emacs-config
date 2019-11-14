@@ -20,4 +20,7 @@
 ;;hl-line-mode  (高亮当前行）
 (global-hl-line-mode t)
 
+(load-theme 'monokai t)
+;(load-theme 'paper t)
+
 (provide 'init-ui)

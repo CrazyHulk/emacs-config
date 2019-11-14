@@ -18,6 +18,8 @@
 
 (global-set-key (kbd "C-c s") 'org-capture)
 
+(global-set-key (kbd "M-x") 'helm-M-x)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
@@ -25,7 +27,7 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
-  "fr" 'recentf-open-files 
+  "fr" 'recentf-open-files
 
   "gf" 'counsel-git
 
@@ -41,7 +43,8 @@
   "3"  'select-window-3
   "w/" 'split-window-right
   "w-" 'split-window-below
-  ":"  'counsel-M-x
+;  ":"  'counsel-M-x
+  ":"  'helm-M-x
   "wM" 'delete-other-windows)
 
 (provide 'init-keybindings)

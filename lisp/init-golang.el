@@ -3,6 +3,9 @@
 
 (require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(require 'flycheck)
+(add-hook 'go-mode-hook 'flycheck-mode)
+;(global-flycheck-mode)
 
 (setq lsp-ui-doc-use-webkit t)
 
