@@ -83,7 +83,9 @@
 ;;company model
 (global-company-mode t)
 (setq company-idle-delay 0.1)
+(setq company-minimum-prefix-length 1)
 (setq company-dabbrev-ignore-case t)
+(add-to-list 'company-auto-complete-chars (char-syntax ?:))
 
 ;;smartparens
 (smartparens-global-mode t)
