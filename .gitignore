@@ -6,3 +6,4 @@ elpa/
 Cask
 *.dat
 .cache/
+autosaves/

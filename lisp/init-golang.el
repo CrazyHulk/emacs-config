@@ -1,6 +1,9 @@
 (require 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp)
 
+(require 'company-lsp)
+(push 'company-lsp company-backends)
+
 (require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (require 'flycheck)

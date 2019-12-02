@@ -36,6 +36,7 @@
 			 go-mode
 			 lsp-mode
 			 lsp-ui
+			 company-lsp
 			 flycheck
 			 helm-ag
 			 magit

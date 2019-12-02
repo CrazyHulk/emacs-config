@@ -3,6 +3,7 @@
 
 ;-turn off scroll-bar
 (scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 ;;;;;set font 
 ;(set-default-font "-*-Menlo-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
