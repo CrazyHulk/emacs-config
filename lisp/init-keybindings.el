@@ -36,6 +36,8 @@
 
   "t"  'lsp-ui-imenu
 
+  "e"  'treemacs
+
   "ps" 'helm-do-ag-project-root
   "0"  'select-window-0
   "1"  'select-window-1
