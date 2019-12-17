@@ -7,3 +7,5 @@ Cask
 *.dat
 .cache/
 autosaves/
+recentf
+transient/

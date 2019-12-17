@@ -10,11 +10,15 @@
 (add-hook 'go-mode-hook 'flycheck-mode)
 ;(global-flycheck-mode)
 
-(setq lsp-ui-doc-use-webkit t)
-
 (lsp-ui-doc-mode)
 (lsp-ui-sideline-mode)
 (lsp-ui-peek-mode)
-(lsp-treemacs-sync-mode)
+
+; no supported in cli
+;(setq lsp-ui-doc-use-webkit t)
+(setq lsp-ui-doc-position 'at-point)
+(setq lsp-ui-doc-alignment 'Window)
+(setq lsp-ui-doc-include-signature t)
+(setq lsp-treemacs-sync-mode t)
 
 (provide 'init-golang)

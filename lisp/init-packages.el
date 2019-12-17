@@ -1,5 +1,6 @@
 (when (>= emacs-major-version 24)
   (require 'package)
+
   (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
   (add-to-list 'package-archives '("melpaen" . "https://melpa.org/packages/")))
 (setq package-archives
@@ -13,6 +14,7 @@
 (require 'cl)
 ;;add whatever packages you want here
 (defvar zhuxi/packages '(
+			 use-package
 			 company
 			 monokai-theme
 			 paper-theme
@@ -36,6 +38,7 @@
 			 go-mode
 			 lsp-mode
 			 lsp-ui
+			 lsp-treemacs
 			 company-lsp
 			 flycheck
 			 helm-ag
@@ -43,6 +46,7 @@
 			 helm-dash
 			 yasnippet
 			 auto-yasnippet
+			 protobuf-mode
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)

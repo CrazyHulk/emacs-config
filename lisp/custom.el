@@ -15,7 +15,7 @@
  '(lsp-ui-doc-use-webkit t)
  '(package-selected-packages
    (quote
-    (company-lsp alert dash dash-functional f go-mode ivy lsp-ui paper-theme auto-yasnippet helm-dash helm-ag lsp-treemacs neotree s lsp-mode company-go yasnippet which-key powerline window-numbering undo-tree evil evil-leader go-snippets company monokai-theme hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell popwin reveal-in-osx-finder expand-region iedit)))
+    (protobuf-mode company-lsp alert dash dash-functional f go-mode ivy lsp-ui paper-theme auto-yasnippet helm-dash helm-ag lsp-treemacs neotree s lsp-mode company-go yasnippet which-key powerline window-numbering undo-tree evil evil-leader go-snippets company monokai-theme hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell popwin reveal-in-osx-finder expand-region iedit)))
  '(popwin:popup-window-position (quote right))
  '(tool-bar-mode nil))
 (custom-set-faces
