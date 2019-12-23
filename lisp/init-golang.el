@@ -21,4 +21,10 @@
 (setq lsp-ui-doc-include-signature t)
 (setq lsp-treemacs-sync-mode t)
 
+(use-package treemacs-evil
+  :after treemacs evil
+  :ensure t)
+;(eval-after-load 'evil-core
+;  '(evil-set-initial-state 'treemacs-mode 'emacs))
+
 (provide 'init-golang)

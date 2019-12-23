@@ -39,6 +39,7 @@
 			 lsp-mode
 			 lsp-ui
 			 lsp-treemacs
+			 treemacs-evil
 			 company-lsp
 			 flycheck
 			 helm-ag

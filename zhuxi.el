@@ -11,6 +11,7 @@
 (require 'init-better-defaults)
 (require 'init-keybindings)
 (require 'init-org)
+(require 'init-treemacs)
 
 (require 'init-golang)
 
