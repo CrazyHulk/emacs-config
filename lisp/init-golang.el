@@ -24,6 +24,9 @@
 (use-package treemacs-evil
   :after treemacs evil
   :ensure t)
+
+(evil-define-key 'treemacs treemacs-mode-map (kbd "x")      #'treemacs-toggle-node)
+;(evil-define-key 'lsp-ui lsp-ui-imenu-mode-map (kbd "q") #'lsp-ui-imenu--kill)
 ;(eval-after-load 'evil-core
 ;  '(evil-set-initial-state 'treemacs-mode 'emacs))
 
