@@ -33,5 +33,8 @@
 ;(evil-define-key 'lsp-ui lsp-ui-imenu-mode-map (kbd "q") #'lsp-ui-imenu--kill)
 ;(eval-after-load 'evil-core
 ;  '(evil-set-initial-state 'treemacs-mode 'emacs))
+(eval-after-load 'evil-core
+  '(evil-set-initial-state 'lsp-ui-imenu-mode 'emacs))
+
 
 (provide 'init-golang)
