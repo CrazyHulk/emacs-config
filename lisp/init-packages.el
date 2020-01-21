@@ -48,6 +48,7 @@
 			 yasnippet
 			 auto-yasnippet
 			 protobuf-mode
+			 ivy-posframe
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
@@ -126,5 +127,19 @@
 (require 'yasnippet)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(require 'ivy-posframe)
+;; display at `ivy-posframe-style'
+(setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-point)))
+(setq ivy-posframe-parameters
+      '((left-fringe . 8)
+        (right-fringe . 8)))
+;(setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
+;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
+;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-center)))
+;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-bottom-left)))
+;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-bottom-left)))
+;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
+(ivy-posframe-mode 1)
 
 (provide 'init-packages)

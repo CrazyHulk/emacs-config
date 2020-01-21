@@ -1,3 +1,5 @@
+(setq mac-command-modifier 'super)
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -20,6 +22,9 @@
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 
+(global-set-key (kbd "s-<f12>") 'counsel-git)
+(global-set-key (kbd "s-f") 'helm-do-ag-project-root)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
@@ -35,6 +40,8 @@
   "bk" 'kill-buffer
 
   "t"  'lsp-ui-imenu
+
+  "r"  'helm-do-ag-project-root
 
   "e"  'treemacs
 

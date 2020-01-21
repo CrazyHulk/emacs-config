@@ -58,7 +58,7 @@
        (treemacs-git-mode 'simple))))
   :bind
   (:map global-map
-;	("<tab>" . treemacs-TAB-actions-config)
+	("<tab>" . treemacs-TAB-actions-config)
         ("M-0"       . treemacs-select-window)
         ("C-x t 1"   . treemacs-delete-other-windows)
         ("C-x t t"   . treemacs)
