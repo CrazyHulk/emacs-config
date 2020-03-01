@@ -24,4 +24,6 @@
 (load-theme 'monokai t)
 ;(load-theme 'paper t)
 
+(setq ring-bell-function 'ignore)
+(setq-default scroll-up-aggressively 0.01 scroll-down-aggressively 0.01)
 (provide 'init-ui)

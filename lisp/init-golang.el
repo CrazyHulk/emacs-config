@@ -37,4 +37,5 @@
   '(evil-set-initial-state 'lsp-ui-imenu-mode 'emacs))
 
 
+(add-hook 'before-save-hook 'gofmt-before-save)
 (provide 'init-golang)
