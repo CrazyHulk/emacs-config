@@ -17,7 +17,8 @@
    (quote
     (flycheck magit markdown-mode org-pomodoro pallet pkg-info popup shut-up spinner transient use-package with-editor treemacs-evil protobuf-mode company-lsp alert dash dash-functional f go-mode ivy lsp-ui paper-theme auto-yasnippet helm-dash helm-ag lsp-treemacs neotree s lsp-mode company-go yasnippet which-key powerline window-numbering undo-tree evil evil-leader go-snippets company monokai-theme hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell popwin reveal-in-osx-finder expand-region iedit)))
  '(popwin:popup-window-position (quote right))
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(xref-prompt-for-identifier nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
