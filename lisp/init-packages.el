@@ -49,6 +49,8 @@
 			 yasnippet
 			 auto-yasnippet
 			 protobuf-mode
+			 rainbow-mode
+			 rainbow-delimiters
 			 ;ivy-posframe
 			 ) "Default packages")
 
@@ -142,5 +144,28 @@
 ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-bottom-left)))
 ;; (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
 ;(ivy-posframe-mode 1)
+
+(use-package rainbow-mode
+  :config
+  (progn
+    (defun @-enable-rainbow ()
+      (rainbow-mode t))
+    (add-hook 'prog-mode-hook '@-enable-rainbow)
+))
+(use-package rainbow-delimiters
+  :config
+  (progn
+    (defun @-enable-rainbow-delimiters ()
+      (rainbow-delimiters-mode t))
+    (add-hook 'prog-mode-hook '@-enable-rainbow-delimiters)))
+(if (display-graphic-p)
+    (progn
+      (set-face-attribute 'default nil
+                          :family "LigaSauceCodeProMedium Nerd Font"
+                          :height 140
+                          :weight 'Medium)
+      (load-theme 'doom-dracula)
+      ))
+
 
 (provide 'init-packages)
