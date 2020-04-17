@@ -49,7 +49,7 @@
 			 yasnippet
 			 auto-yasnippet
 			 protobuf-mode
-			 ivy-posframe
+			 ;ivy-posframe
 			 ) "Default packages")
 
 (setq package-selected-packages zhuxi/packages)
