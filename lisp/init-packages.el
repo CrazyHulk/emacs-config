@@ -42,6 +42,7 @@
 			 treemacs-evil
 			 company-lsp
 			 flycheck
+			 helm
 			 helm-ag
 			 magit
 			 helm-dash

@@ -1,5 +1,5 @@
-(require 'lsp-mode)
-(add-hook 'go-mode-hook #'lsp)
+;(require 'lsp-mode)
+;(add-hook 'go-mode-hook #'lsp)
 
 (require 'company-lsp)
 (push 'company-lsp company-backends)
@@ -9,6 +9,32 @@
 (require 'flycheck)
 (add-hook 'go-mode-hook 'flycheck-mode)
 ;(global-flycheck-mode)
+
+(use-package lsp-mode
+  :ensure t  
+  :config  
+  (add-hook 'go-mode-hook #'lsp)
+  (add-hook 'python-mode-hook #'lsp)
+  (add-hook 'c++-mode-hook #'lsp)
+  (add-hook 'c-mode-hook #'lsp)
+  (add-hook 'rust-mode-hook #'lsp)
+  (add-hook 'html-mode-hook #'lsp)
+  (add-hook 'js-mode-hook #'lsp)
+  (add-hook 'typescript-mode-hook #'lsp)
+  (add-hook 'json-mode-hook #'lsp)
+  (add-hook 'yaml-mode-hook #'lsp)
+  (add-hook 'dockerfile-mode-hook #'lsp)
+  (add-hook 'shell-mode-hook #'lsp)
+  (add-hook 'css-mode-hook #'lsp)
+
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
+                    :major-modes '(python-mode)
+                    :server-id 'pyls))
+  (setq company-minimum-prefix-length 1
+        company-idle-delay 0.500) ;; default is 0.2
+  (require 'lsp-clients) 
+  :commands lsp)
 
 (lsp-ui-doc-mode)
 (lsp-ui-sideline-mode)
@@ -99,5 +125,5 @@
   '(evil-set-initial-state 'lsp-ui-imenu-mode 'emacs))
 
 
-(add-hook 'before-save-hook 'gofmt-before-save)
+;(add-hook 'before-save-hook 'gofmt-before-save)
 (provide 'init-golang)
