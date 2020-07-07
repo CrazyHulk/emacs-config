@@ -164,7 +164,7 @@
                           :family "LigaSauceCodeProMedium Nerd Font"
                           :height 140
                           :weight 'Medium)
-      (load-theme 'doom-dracula)
+;      (load-theme 'doom-dracula)
       ))
 
 
