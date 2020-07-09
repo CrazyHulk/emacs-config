@@ -40,7 +40,7 @@
 			 lsp-ui
 			 lsp-treemacs
 			 treemacs-evil
-			 company-lsp
+;			 company-lsp
 			 flycheck
 			 helm
 			 helm-ag

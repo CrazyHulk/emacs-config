@@ -1,13 +1,17 @@
-(require 'lsp-mode)
-(add-hook 'go-mode-hook #'lsp)
+;(require 'lsp-mode)
+;(add-hook 'go-mode-hook #'lsp)
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook (go-mode . lsp-deferred))
 
-(require 'company-lsp)
-(push 'company-lsp company-backends)
+;(require 'company-lsp)
+;(push 'company-lsp company-backends)
 
 (require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(require 'flycheck)
-(add-hook 'go-mode-hook 'flycheck-mode)
+;(require 'flycheck)
+;(add-hook 'go-mode-hook 'flycheck-mode)
 ;(global-flycheck-mode)
 
 ;(use-package lsp-mode
