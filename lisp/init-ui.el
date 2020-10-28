@@ -7,8 +7,9 @@
 
 ;;;;;set font 
 ;(set-default-font "-*-Menlo-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
-(when (memq window-system '(mac ns))
-  (set-default-font "-*-Menlo-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1"))
+; (when (memq window-system '(mac ns))
+  ; (set-default-font "-*-Menlo-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1"))
+
 ;;-turn off init screen;
 (setq inhibit-startup-screen t)
 

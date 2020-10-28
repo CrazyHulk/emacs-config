@@ -109,7 +109,7 @@
 ;; (load-theme 'monokai t)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 
-(pallet-mode)  
+; (pallet-mode)  
 ;(pallet-init)    ; 在.emacs.d 中生成一个 Cask 文件, 写入源与现有包
 ;(pallet-install) ; 将 elpa 中的 package 拷贝到.Cask/<you version>/elpa 目录中
 
