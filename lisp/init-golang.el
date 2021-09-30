@@ -1,14 +1,14 @@
-;(require 'lsp-mode)
 ;(add-hook 'go-mode-hook #'lsp)
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
+  :config
   :hook (go-mode . lsp-deferred))
 
 ;(require 'company-lsp)
 ;(push 'company-lsp company-backends)
 
-(require 'lsp-ui)
+(use-package lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 ;(require 'flycheck)
 ;(add-hook 'go-mode-hook 'flycheck-mode)
@@ -129,5 +129,5 @@
   '(evil-set-initial-state 'lsp-ui-imenu-mode 'emacs))
 
 
-;(add-hook 'before-save-hook 'gofmt-before-save)
+; (add-hook 'before-save-hook 'gofmt-before-save)
 (provide 'init-golang)

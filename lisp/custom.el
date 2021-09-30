@@ -8,6 +8,7 @@
  '(company-idle-delay 0.1)
  '(custom-safe-themes
    '("c7a9a68bd07e38620a5508fef62ec079d274475c8f92d75ed0c33c45fbe306bc" default))
+ '(lsp-file-watch-threshold 10000)
  '(lsp-ui-doc-alignment 'window)
  '(lsp-ui-doc-position 'at-point)
  '(lsp-ui-doc-use-childframe t)

@@ -28,6 +28,14 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+(defun treemacs-exclude ()
+  "Not documented, QUERY."
+  (interactive)
+  (treemacs)
+  (treemacs-display-current-project-exclusively))
+;  (treemacs))
+
+
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-key
@@ -43,7 +51,8 @@
 
   "r"  'helm-do-ag-project-root
 
-  "e"  'treemacs
+;  "e"  'treemacs
+  "e"  'treemacs-exclude
 
   "ps" 'helm-do-ag-project-root
   "0"  'select-window-0
@@ -55,5 +64,7 @@
 ;  ":"  'counsel-M-x
   ":"  'helm-M-x
   "wM" 'delete-other-windows)
+
+
 
 (provide 'init-keybindings)
