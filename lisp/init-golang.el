@@ -41,12 +41,12 @@
 ;   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
 ;; go-mode
-(use-package go-mode
-  :config
-  (progn
-    (setq gofmt-command "goimports")
-    (add-hook 'before-save-hook 'gofmt-before-save)
-    ))
+; (use-package go-mode
+;   :config
+;   (progn
+;     (setq gofmt-command "goimports")
+;     (add-hook 'before-save-hook 'gofmt-before-save)
+;     ))
 
 ;;(use-package company-go
 ;;  :init

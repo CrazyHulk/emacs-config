@@ -18,7 +18,8 @@
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
-
+(unless (file-exists-p custom-file)  ;; 如果该文件不存在
+  (write-region "" nil custom-file)) ;; 写入一个空内容，相当于 touch 一下它
 (load-file custom-file)
 
 ;-turn off electric-indent-mode

@@ -55,11 +55,11 @@
 
 
 ;(add-hook 'go-mode-hook #'lsp)
-(use-package lsp-mode
-  :ensure t
-  :commands (lsp lsp-deferred)
-  :config
-  :hook (go-mode . lsp-deferred))
+; (use-package lsp-mode
+;   :ensure t
+;   :commands (lsp lsp-deferred)
+;   :config
+;   :hook (go-mode . lsp-deferred))
 
 ; (use-package lsp-ui)
 ; (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -94,5 +94,12 @@
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
 (setq lsp-prefer-capf t)
+
+(require 'tree-sitter)
+(require 'tree-sitter-langs)
+
+(add-hook 'rust-mode-hook #'tree-sitter-mode)
+(global-tree-sitter-mode)
+(tree-sitter-require 'go)
 
 (provide 'init-lsp)
