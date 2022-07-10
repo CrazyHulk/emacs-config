@@ -3,7 +3,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 ;;;;;;;;;;;;;;;;;;;;;;package init begin;;;;;;;;;;;;;;;;;;;;;;;
-(debug-on-entry 'package-initialize)
+; (debug-on-entry 'package-initialize)
 
 (org-babel-load-file (expand-file-name "zhuxi.org" user-emacs-directory))
 

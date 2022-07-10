@@ -66,4 +66,20 @@
         ("C-x t C-t" . treemacs-find-file)
         ("C-x t M-t" . treemacs-find-tag)))
 
+(use-package treemacs-evil
+  :after treemacs evil
+  :ensure t)
+
+(evil-define-key 'treemacs treemacs-mode-map (kbd "o")      #'treemacs-toggle-node)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "<tab>")      #'treemacs-toggle-node)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "TAB")      #'treemacs-toggle-node)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "x")      #'treemacs-collapse-parent-node)
+;	("<tab>" . treemacs-TAB-actions-config)
+;(evil-define-key 'lsp-ui lsp-ui-imenu-mode-map (kbd "q") #'lsp-ui-imenu--kill)
+;(eval-after-load 'evil-core
+;  '(evil-set-initial-state 'treemacs-mode 'emacs))
+(eval-after-load 'evil-core
+  '(evil-set-initial-state 'lsp-ui-imenu-mode 'emacs))
+
+
 (provide 'init-treemacs)
