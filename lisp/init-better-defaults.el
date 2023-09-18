@@ -5,7 +5,8 @@
 
 
 ;-turn on the line number
-(global-linum-mode t)
+; (global-linum-mode t)
+(display-line-numbers-mode 1)
 
 ;-no back-file
 (setq make-backup-files nil)
