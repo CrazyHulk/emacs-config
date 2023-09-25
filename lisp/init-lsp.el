@@ -95,11 +95,11 @@
 
 (setq lsp-prefer-capf t)
 
-(require 'tree-sitter)
-(require 'tree-sitter-langs)
+; (require 'tree-sitter)
+; (require 'tree-sitter-langs)
 
 (add-hook 'rust-mode-hook #'tree-sitter-mode)
-(global-tree-sitter-mode)
-(tree-sitter-require 'go)
+; (global-tree-sitter-mode)
+; (tree-sitter-require 'go)
 
 (provide 'init-lsp)

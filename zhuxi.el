@@ -12,6 +12,7 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'init-treemacs)
+(require 'init-lsp)
 
 (require 'init-golang)
 

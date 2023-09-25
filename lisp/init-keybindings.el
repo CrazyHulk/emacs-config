@@ -49,7 +49,7 @@
 
   "t"  'lsp-ui-imenu
 
-  "r"  'helm-do-ag-project-root
+  "fg"  'helm-do-ag-project-root
 
 ;  "e"  'treemacs
   "e"  'treemacs-exclude
@@ -63,7 +63,11 @@
   "w-" 'split-window-below
 ;  ":"  'counsel-M-x
   ":"  'helm-M-x
-  "wM" 'delete-other-windows)
+  "wM" 'delete-other-windows
+  "gi" 'lsp-ui-peek-find-implementation
+  "gr" 'lsp-ui-peek-find-references
+  "rn" 'lsp-rename
+)
 
 
 
