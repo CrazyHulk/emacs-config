@@ -16,6 +16,7 @@
 (defvar zhuxi/packages '(
 			 use-package
 			 company
+			 ; company-mode
 			 monokai-theme
 			 paper-theme
 			 hungry-delete
@@ -39,7 +40,6 @@
 			 lsp-ui
 			 lsp-treemacs
 			 treemacs-evil
-;			 company-lsp
 			 flycheck
 			 helm
 			 helm-ag

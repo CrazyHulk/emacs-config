@@ -39,10 +39,12 @@
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-key
-  "ff" 'find-file
-  "fr" 'recentf-open-files
+  ; "ff" 'find-file
+  ; "fr" 'recentf-open-files
 
-  "gf" 'counsel-git
+  "fo" 'find-file
+  "ff" 'counsel-git
+  "fr" 'counsel-recentf
 
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
